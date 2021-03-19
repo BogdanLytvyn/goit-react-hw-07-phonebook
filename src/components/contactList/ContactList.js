@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Contact from '../contact/Contact';
 import { connect } from 'react-redux';
+import { getFilteredContacts } from '../../redux/contacts/contactsSelectors';
 
 class ContactList extends Component {
   render() {
@@ -18,13 +19,7 @@ class ContactList extends Component {
 
 const mapStateToProps = state => {
   return {
-    contacts: state.contacts.filter
-      ? state.contacts.items.filter(contact =>
-          contact.name
-            .toLowerCase()
-            .includes(state.contacts.filter.toLowerCase()),
-        )
-      : state.contacts.items,
+    contacts: getFilteredContacts(state),
   };
 };
 

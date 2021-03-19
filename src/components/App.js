@@ -6,6 +6,7 @@ import style from './Phonebook.module.css';
 import { connect } from 'react-redux';
 import { changeFilter } from '../redux/contacts/contuctsActions';
 import Loader from './loader/Loader';
+import { getLoading, getContacts } from '../redux/contacts/contactsSelectors';
 
 class App extends Component {
   render() {
@@ -16,7 +17,6 @@ class App extends Component {
         <ContactForm />
         <h2>Contacts</h2>
         {items.length >= 2 && <Filter />}
-
         {items.length > 0 && <ContactList />}
         {this.props.loading && <Loader></Loader>}
       </div>
@@ -26,8 +26,8 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    items: state.contacts.items,
-    loading: state.contacts.loading,
+    items: getContacts(state),
+    loading: getLoading(state),
   };
 };
 
