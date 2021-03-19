@@ -16,8 +16,8 @@ class App extends Component {
         <h1>Phonebook</h1>
         <ContactForm />
         <h2>Contacts</h2>
-        {items.length >= 2 && <Filter />}
-        {items.length > 0 && <ContactList />}
+        <Filter />
+        <ContactList />
         {this.props.loading && <Loader></Loader>}
       </div>
     );
