@@ -1,34 +1,3 @@
 {
-  "contacts": [
-    {
-      "name": "Bogdan",
-      "number": "1",
-      "id": 1
-    },
-    {
-      "name": "wsegfws",
-      "number": "seg",
-      "id": 2
-    },
-    {
-      "name": "segsg",
-      "number": "sergs",
-      "id": 3
-    },
-    {
-      "name": "drthgedr",
-      "number": "edrghredr",
-      "id": 4
-    },
-    {
-      "name": "sdrhde",
-      "number": "drthd",
-      "id": 5
-    },
-    {
-      "name": "edrthdh",
-      "number": "sdrhgsdr",
-      "id": 6
-    }
-  ]
+  "contacts": []
 }
