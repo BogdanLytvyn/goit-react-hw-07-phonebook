@@ -10,13 +10,13 @@ import { getLoading, getContacts, getFilter } from '../redux/contacts/contactsSe
 
 class App extends Component {
   render() {
-    const { loading } = this.props;
+    const { items, loading } = this.props;
     return (
       <div className={style.phoneBook}>
         <h1>Phonebook</h1>
         <ContactForm />
         <h2>Contacts</h2>
-        <Filter />
+        {items.length >= 1 && <Filter />}
         <ContactList />
         {loading && <Loader />}
       </div>
